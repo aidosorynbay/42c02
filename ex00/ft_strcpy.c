@@ -20,7 +20,6 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	write(1, dest, i);
 	return (dest);
 }
 
