@@ -21,12 +21,10 @@ int	ft_str_is_numeric(char *str)
 	}
 	if (str[i] == '\0')
 	{
-		printf("%i\n", 1);
 		return (1);
 	}
 	else
 	{
-		printf("%i\n", 0);
 		return (0);
 	}
 }
