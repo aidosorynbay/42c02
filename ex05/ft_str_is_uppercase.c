@@ -36,7 +36,7 @@ int	ft_str_is_uppercase(char *str)
 // 	char alph_abet[] = "DLKJFLSDJF";
 // 	char not_alph[] = "SKDFLSJFLkDKJF";
 // 	char empty_str[] = "a3KDJFA";
-// 	ft_str_is_lowercase(alph_abet);
-// 	ft_str_is_lowercase(not_alph);
-// 	ft_str_is_lowercase(empty_str);
+// 	ft_str_is_uppercase(alph_abet);
+// 	ft_str_is_uppercase(not_alph);
+// 	ft_str_is_uppercase(empty_str);
 // }
