@@ -20,6 +20,7 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = src[i];
 	return (dest);
 }
 
@@ -28,7 +29,8 @@ char	*ft_strcpy(char *dest, char *src)
 
 // int	main(void)
 // {
-// 	char str1[] = "Goodbye";
-// 	char str2[] = "Hello, world!";
+// 	char str1[] = "Hello world";
+// 	char str2[] = "Goodbye";
 // 	ft_strcpy(str1, str2); 
+// 	printf("%s", str1);
 // }
