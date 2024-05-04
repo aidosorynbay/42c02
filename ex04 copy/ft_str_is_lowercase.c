@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <aorynbay@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 16:42:08 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/05/03 16:42:15 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/05/03 17:04:19 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/05/03 17:04:21 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_numeric(char *str)
+int	ft_str_is_lowercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] >= 48 && str[i] <= 57)
+	while (str[i] >= 97 && str[i] <= 122)
 	{
 		i++;
 	}
@@ -33,10 +33,10 @@ int	ft_str_is_numeric(char *str)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char alph_abet[] = "384759253";
-// 	char not_alph[] = "48504590g90";
-// 	char empty_str[] = "45kfjgldjg";
-// 	ft_str_is_numeric(alph_abet);
-// 	ft_str_is_numeric(not_alph);
-// 	ft_str_is_numeric(empty_str);
+// 	char alph_abet[] = "kfjgtvldkijg";
+// 	char not_alph[] = "abcdefghijkTl";
+// 	char empty_str[] = "";
+// 	ft_str_is_lowercase(alph_abet);
+// 	ft_str_is_lowercase(not_alph);
+// 	ft_str_is_lowercase(empty_str);
 // }

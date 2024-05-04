@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <aorynbay@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 15:19:04 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/05/03 15:19:06 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/05/03 18:41:47 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/05/03 18:41:49 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] >= 65 && str[i] <= 122)
+	while (str[i] != '\0')
 	{
+		if (str[i] >= 65 && str[i] <= 90)
+		{
+			str[i] = str[i] + 32;
+		}
 		i++;
 	}
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (str);
 }
 
 // #include <unistd.h>
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char alph_abet[] = "kfjgTvldkijg";
-// 	char not_alph[] = "abcdefghijk2l";
-// 	char empty_str[] = "23adsaffq";
-// 	ft_str_is_alpha(alph_abet);
-// 	ft_str_is_alpha(not_alph);
-// 	ft_str_is_alpha(empty_str);
+// 	char alph_abet[] = "DSKJF";
+// 	char not_alph[] = "dfSDFDS";
+// 	char empty_str[] = "__-__sdasDSA";
+// 	ft_strlowcase(alph_abet);
+// 	ft_strlowcase(not_alph);
+// 	ft_strlowcase(empty_str);
 // }
