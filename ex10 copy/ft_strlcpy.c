@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <aorynbay@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/03 14:27:01 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/05/03 14:27:03 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/05/05 12:51:11 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/05/05 12:51:12 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (i < size - 1 && src[i] != '\0')
 	{
 		dest[i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	dest[i] = '\0';
+	return (i);
 }
 
 // #include <unistd.h>
@@ -33,8 +29,13 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 // #include <string.h>
 // int	main(void)
 // {
-// 	char str1[] = "Hel";
+// 	char str1[] = "Hello world";
 // 	char str2[] = "Goodbye";
-// 	ft_strncpy(str1, str2, 6);
-// 	printf("%s", str1);
+// 	ft_strlcpy(str1, str2, 4);
+// 	printf("%s", 7);
+// 	printf("%c", '\n');
+// 	char str3[] = "Hello world";
+// 	char str4[] = "Goodbye";
+// 	size_t len = strlcpy(str3, str4, 4);
+// 	printf("%zu", len);
 // }

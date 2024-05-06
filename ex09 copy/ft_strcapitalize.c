@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*check_upper(char *ch, int i)
+{
+	if ((ch[i - 1] >= 'a' && ch[i - 1] <= 'z')
+		|| (ch[i - 1] >= 'A' && ch[i - 1] <= 'Z'))
+	{
+		ch[i] += 32;
+	}
+	return (0);
+}
+
 char	*check_lower(char *ch)
 {
 	int	i;
@@ -29,12 +39,7 @@ char	*check_lower(char *ch)
 		}
 		else if (ch[i] >= 'A' && ch[i] <= 'Z')
 		{
-			if ((ch[i - 1] >= 'a' && ch[i - 1] <= 'z')
-				|| (ch[i - 1] >= 'A' && ch[i - 1] <= 'Z'))
-			{
-				ch[i] += 32;
-			}
-			i++;
+			check_upper(ch, i);
 		}
 		else
 		{
@@ -62,7 +67,8 @@ char	*ft_strcapitalize(char *str)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char	str1[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+// 	char	str1[] = "";
+// 	salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un
 // 	ft_strcapitalize(str1);
 // 	puts(str1);
 // }

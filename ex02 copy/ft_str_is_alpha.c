@@ -15,22 +15,20 @@ int	ft_str_is_alpha(char *str)
 	int	i;
 
 	i = 0;
-	while (str[i] >= 65 && str[i] <= 122)
+	while (str[i] != '\0')
 	{
+		if (!((str[i] >= 'A' && str[i] <= 'Z')
+				|| (str[i] >= 'a' && str[i] <= 'z')))
+		{
+			return (0);
+		}
 		i++;
 	}
-	if (str[i] == '\0')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (1);
 }
 
-// #include <unistd.h>
 // #include <stdio.h>
+// #include <unistd.h>
 // int	main(void)
 // {
 // 	char alph_abet[] = "kfjgTvldkijg";
